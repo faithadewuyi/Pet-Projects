@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const Randomuser = () => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -67,7 +68,7 @@ const Randomuser = () => {
           <p>Name: {`${user.name.first} ${user.name.last}`}</p>
           <p>Email: {user.email}</p>
           <p>Date of Birth: {new Date(user.dob.date).toLocaleDateString()}</p>
-          <p> Phone Number: {user.phone}</p>
+          <p>Phone Number: {user.phone}</p>
           <p>Address: {`${user.location.street.number} ${user.location.street.name}, ${user.location.city}, ${user.location.state}, ${user.location.postcode}`}</p>
 
         </div>
